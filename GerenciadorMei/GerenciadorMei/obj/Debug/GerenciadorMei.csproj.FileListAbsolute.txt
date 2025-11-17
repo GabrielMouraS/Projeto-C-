@@ -8,3 +8,14 @@ C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\GerenciadorMei\G
 C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\GerenciadorMei\GerenciadorMei\bin\Debug\System.Data.SQLite.xml
 C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.exe
 C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.pdb
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\GerenciadorMei.exe.config
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.exe
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.pdb
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\GerenciadorMei.exe
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\GerenciadorMei.pdb
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\System.Data.SQLite.dll
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\System.Data.SQLite.xml
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csprojResolveAssemblyReference.cache
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.Properties.Resources.resources
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csproj.GenerateResource.Cache
+C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.UI.MainForm.resources
