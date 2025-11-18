@@ -12,6 +12,7 @@ namespace GerenciadorMei.UI
             // Inicializa banco e cria tabelas
             new Db();
 
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

@@ -19,3 +19,15 @@ C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\Gere
 C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.Properties.Resources.resources
 C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csproj.GenerateResource.Cache
 C:\Users\Fatec\Downloads\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.UI.MainForm.resources
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\GerenciadorMei.exe.config
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.exe
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.pdb
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\GerenciadorMei.exe
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\GerenciadorMei.pdb
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\System.Data.SQLite.dll
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\bin\Debug\System.Data.SQLite.xml
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.UI.MainForm.resources
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.UI.TelaServicos.resources

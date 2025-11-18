@@ -34,5 +34,14 @@ namespace GerenciadorMei.UI
         {
 
         }
+
+        private void listarServiçosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 1. Cria uma nova "instância" da sua tela de serviços
+            TelaServicos telaServicos = new TelaServicos();
+
+            // 2. Mostra a tela para o usuário
+            telaServicos.ShowDialog();
+        }
     }
 }
