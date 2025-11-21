@@ -2,7 +2,7 @@
 
 namespace GerenciadorMei.Database
 {
-    class Db
+    public class Db
     {
         private const string ConnectionString = "Data Source=gerenciador.db;Version=3;";
 

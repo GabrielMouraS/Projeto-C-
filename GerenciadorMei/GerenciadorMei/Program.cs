@@ -9,7 +9,7 @@ namespace GerenciadorMei.UI
         [STAThread]
         static void Main()
         {
-            // Inicializa banco e cria tabelas
+           
             new Db();
 
 
@@ -18,6 +18,7 @@ namespace GerenciadorMei.UI
 
 
             //Application.Run(new NovoServico());
+            //Application.Run(new TelaServicos());
             Application.Run(new LoginForm());
         }
     }

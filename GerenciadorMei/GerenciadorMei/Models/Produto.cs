@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace GerenciadorMei.Models
 {
-    class Produto
+    public class Produto
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public decimal PrecoVenda { get; set; }
+        public decimal Preco { get; set; }
     }
 
 }

@@ -72,6 +72,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = " NOVO";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.novoServiçoToolS_Click);
             // 
             // button1
             // 
@@ -85,6 +86,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "FILTRAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.BUSCA_TextChanged);
             // 
             // dataGridView1
             // 

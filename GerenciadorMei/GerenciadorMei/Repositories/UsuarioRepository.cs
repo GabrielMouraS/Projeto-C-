@@ -5,37 +5,16 @@ using GerenciadorMei.Database;
 
 namespace GerenciadorMei.Repositories
 {
-    class UsuarioRepository
+    public class UsuarioRepository 
     {
-        public void CriarTabela()
-        {
-            using (var conn = Db.GetConnection())
-            {
-                conn.Open();
-
-                string sql = @"
-                    CREATE TABLE IF NOT EXISTS usuarios (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Nome TEXT NOT NULL,
-                        Email TEXT NOT NULL UNIQUE,
-                        Senha TEXT NOT NULL
-                    );
-                ";
-
-                using (var cmd = new SQLiteCommand(sql, conn))
-                {
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
+       
         public void Inserir(Usuario u)
         {
             using (var conn = Db.GetConnection())
             {
                 conn.Open();
-
-                string sql = @"INSERT INTO usuarios (Nome, Email, Senha)
+                
+                string sql = @"INSERT INTO usuarios (nome, email, senha) 
                                VALUES (@Nome, @Email, @Senha)";
 
                 using (var cmd = new SQLiteCommand(sql, conn))
@@ -55,7 +34,7 @@ namespace GerenciadorMei.Repositories
             {
                 conn.Open();
 
-                string sql = @"SELECT * FROM usuarios WHERE Email = @Email LIMIT 1";
+                string sql = @"SELECT * FROM usuarios WHERE email = @Email LIMIT 1";
 
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
@@ -67,16 +46,29 @@ namespace GerenciadorMei.Repositories
                         {
                             return new Usuario
                             {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                Nome = reader["Nome"].ToString(),
-                                Email = reader["Email"].ToString(),
-                                Senha = reader["Senha"].ToString()
+                                
+                                Id = Convert.ToInt32(reader["id"]),
+                                Nome = reader["nome"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Senha = reader["senha"].ToString()
                             };
                         }
                     }
                 }
             }
-            return null;
+            return null; // Retorna null se não achar ninguém (usuário ou senha errados)
+        }
+
+   
+        public bool ValidarLogin(string email, string senha)
+        {
+            var usuario = BuscarPorEmail(email);
+
+            if (usuario != null && usuario.Senha == senha)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

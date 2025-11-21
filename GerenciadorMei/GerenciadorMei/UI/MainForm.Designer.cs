@@ -4,9 +4,7 @@
     {
         private void FormularioPrincipal_Resize(object sender, System.EventArgs e)
         {
-            // Supondo que seu painel se chame "panelCentral"
-            panelCentral.Left = (this.ClientSize.Width - panelCentral.Width) / 2;
-            panelCentral.Top = (this.ClientSize.Height - panelCentral.Height) / 2;
+
         }
         private System.ComponentModel.IContainer components = null;
 
@@ -99,6 +97,7 @@
             this.cadastrarServiçoToolStripMenuItem.Name = "cadastrarServiçoToolStripMenuItem";
             this.cadastrarServiçoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.cadastrarServiçoToolStripMenuItem.Text = "Cadastrar Serviço";
+            this.cadastrarServiçoToolStripMenuItem.Click += new System.EventHandler(this.novoServiçoToolStripMenuItem_Click);
             // 
             // listarServiçosToolStripMenuItem
             // 
