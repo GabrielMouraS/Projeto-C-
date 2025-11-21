@@ -17,9 +17,9 @@ namespace GerenciadorMei.Repositories
 
                 string sql = @"
                     INSERT INTO Clientes 
-                    (Nome, Telefone, Email, DataNascimento, Cpf, Cnpj, Endereco)
+                    (Nome, Telefone, Email, data_nascimento, Cpf, Cnpj, Endereco)
                     VALUES
-                    (@Nome, @Telefone, @Email, @DataNascimento, @Cpf, @Cnpj, @Endereco);
+                    (@Nome, @Telefone, @Email, @data_nascimento, @Cpf, @Cnpj, @Endereco);
                 ";
 
                 using (var cmd = new SQLiteCommand(sql, conn))
@@ -29,7 +29,7 @@ namespace GerenciadorMei.Repositories
                     cmd.Parameters.AddWithValue("@Email", c.Email ?? "");
 
                     
-                    cmd.Parameters.AddWithValue("@DataNascimento",
+                    cmd.Parameters.AddWithValue("@data_nascimento",
                         c.DataNascimento.HasValue ? c.DataNascimento.Value.ToString("yyyy-MM-dd") : null);
 
                     cmd.Parameters.AddWithValue("@Cpf", c.Cpf ?? "");
@@ -128,7 +128,7 @@ namespace GerenciadorMei.Repositories
                         Nome=@Nome,
                         Telefone=@Telefone,
                         Email=@Email,
-                        DataNascimento=@DataNascimento,
+                        data_nascimento=@data_nascimento,
                         Cpf=@Cpf,
                         Cnpj=@Cnpj,
                         Endereco=@Endereco
@@ -141,7 +141,7 @@ namespace GerenciadorMei.Repositories
                     cmd.Parameters.AddWithValue("@Telefone", c.Telefone ?? "");
                     cmd.Parameters.AddWithValue("@Email", c.Email ?? "");
 
-                    cmd.Parameters.AddWithValue("@DataNascimento",
+                    cmd.Parameters.AddWithValue("@data_nascimento",
                         c.DataNascimento.HasValue ? c.DataNascimento.Value.ToString("yyyy-MM-dd") : null);
 
                     cmd.Parameters.AddWithValue("@Cpf", c.Cpf ?? "");

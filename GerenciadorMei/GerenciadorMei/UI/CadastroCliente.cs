@@ -8,9 +8,9 @@ namespace GerenciadorMei.UI
     public partial class CadastroCliente : Form
     {
         private readonly ClienteRepository _repo = new ClienteRepository();
-        private int _clienteId = 0; // 0 = Novo, >0 = Edição
+        private int _clienteId = 0; 
 
-        // --- CONSTRUTOR 1: NOVO CLIENTE ---
+        
         public CadastroCliente()
         {
             InitializeComponent();
@@ -18,13 +18,13 @@ namespace GerenciadorMei.UI
             lblTitulo.Text = "Novo Cliente";
         }
 
-        // --- CONSTRUTOR 2: EDITAR CLIENTE ---
+       
         public CadastroCliente(Cliente cliente)
         {
             InitializeComponent();
             ConfigurarEventos();
 
-            // Preenche os campos com os dados existentes
+            
             _clienteId = cliente.Id;
             lblTitulo.Text = "Editar Cliente";
 
@@ -35,7 +35,7 @@ namespace GerenciadorMei.UI
             txtCnpj.Text = cliente.Cnpj;
             txtEndereco.Text = cliente.Endereco;
 
-            // Lógica da Data de Nascimento
+            
             if (cliente.DataNascimento != null)
             {
                 dtpDataNasc.Value = cliente.DataNascimento.Value;
@@ -48,21 +48,21 @@ namespace GerenciadorMei.UI
             }
         }
 
-        // --- LIGA OS BOTÕES AO CÓDIGO ---
+        
         private void ConfigurarEventos()
         {
-            // Vincula o clique dos botões às funções abaixo
+            
             btnSalvar.Click += BtnSalvar_Click;
             btnCancelar.Click += BtnCancelar_Click;
 
-            // Lógica visual do Checkbox de Data
+            
             checkSemData.CheckedChanged += CheckSemData_CheckedChanged;
         }
 
-        // --- BOTÃO SALVAR ---
+        
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            // Validação simples
+            
             if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
                 MessageBox.Show("O campo Nome é obrigatório.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -70,7 +70,7 @@ namespace GerenciadorMei.UI
                 return;
             }
 
-            // Cria o objeto com os dados da tela
+            
             var cliente = new Cliente
             {
                 Id = _clienteId,
@@ -80,7 +80,7 @@ namespace GerenciadorMei.UI
                 Cpf = txtCpf.Text,
                 Cnpj = txtCnpj.Text,
                 Endereco = txtEndereco.Text,
-                // Se marcou "Não informar", salva como null. Senão, salva a data.
+                
                 DataNascimento = checkSemData.Checked ? (DateTime?)null : dtpDataNasc.Value
             };
 
@@ -88,14 +88,14 @@ namespace GerenciadorMei.UI
             {
                 if (_clienteId == 0)
                 {
-                    _repo.Inserir(cliente); // Cria Novo
+                    _repo.Inserir(cliente); 
                 }
                 else
                 {
-                    _repo.Atualizar(cliente); // Atualiza Existente
+                    _repo.Atualizar(cliente); 
                 }
 
-                // Fecha a tela e avisa que deu certo (OK)
+                
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -105,16 +105,16 @@ namespace GerenciadorMei.UI
             }
         }
 
-        // --- BOTÃO CANCELAR ---
+        
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        // --- CHECKBOX DA DATA ---
+       
         private void CheckSemData_CheckedChanged(object sender, EventArgs e)
         {
-            // Se marcou "sem data", desabilita o calendário
+            
             dtpDataNasc.Enabled = !checkSemData.Checked;
         }
     }

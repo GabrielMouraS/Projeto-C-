@@ -36,3 +36,4 @@ C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\Geren
 C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.exe
 C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.pdb
+C:\Users\Usuario\Desktop\Faculdade\4 Semestre\Zé\PROJETO FINAL\Projeto-C-\GerenciadorMei\GerenciadorMei\obj\Debug\GerenciadorMei.csprojResolveAssemblyReference.cache
