@@ -97,6 +97,7 @@ namespace GerenciadorMei.UI
 
                 
                 this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Novo Cliente adiconado: ");
                 this.Close();
             }
             catch (Exception ex)

@@ -20,7 +20,8 @@ namespace GerenciadorMei.UI
             //Application.Run(new NovoServico());
             //Application.Run(new TelaServicos());
             //Application.Run(new CadastroCliente());
-            Application.Run(new LoginForm());
+            //Application.Run(new BuscarCliente());
+             Application.Run(new LoginForm());
         }
     }
 }

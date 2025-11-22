@@ -18,6 +18,8 @@ namespace GerenciadorMei.Models
         public string Status { get; set; }
 
         public List<int> Produtos { get; set; } = new List<int>();
+
+        public string NomeCliente { get; set; }
     }
 
 }

@@ -24,82 +24,83 @@ namespace GerenciadorMei.Database
                 conn.Open();
 
                 string sql = @"
-                    CREATE TABLE IF NOT EXISTS usuarios (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        nome TEXT NOT NULL,
-                        email TEXT NOT NULL,
-                        senha TEXT NOT NULL
-                    );
+            CREATE TABLE IF NOT EXISTS usuarios (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL,
+                email TEXT NOT NULL,
+                senha TEXT NOT NULL
+            );
 
-                       DROP TABLE IF EXISTS clientes;                        
+            CREATE TABLE IF NOT EXISTS clientes (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL,
+                telefone TEXT,
+                email TEXT,
+                data_nascimento TEXT,
+                cpf TEXT,
+                cnpj TEXT,
+                endereco TEXT
+            );
 
-                    -- TABELA CLIENTES CORRIGIDA COM OS NOVOS CAMPOS
-                    CREATE TABLE IF NOT EXISTS clientes (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        nome TEXT NOT NULL,
-                        telefone TEXT,
-                        email TEXT,            -- Adicionado
-                        data_nascimento TEXT,  -- Adicionado
-                        cpf TEXT,              -- Adicionado
-                        cnpj TEXT,             -- Adicionado
-                        endereco TEXT
-                    );
+            CREATE TABLE IF NOT EXISTS servicos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL,
+                preco REAL NOT NULL
+            );
 
-                    CREATE TABLE IF NOT EXISTS servicos (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        nome TEXT NOT NULL,
-                        preco REAL NOT NULL
-                    );
+            CREATE TABLE IF NOT EXISTS produtos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL,
+                preco REAL NOT NULL
+            );
 
-                    CREATE TABLE IF NOT EXISTS produtos (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        nome TEXT NOT NULL,
-                        preco REAL NOT NULL
-                    );
+            -- TABELA ORDENS CORRIGIDA (AGORA COM 'nome' IGUAL AO REPOSITÓRIO)
+            CREATE TABLE IF NOT EXISTS ordens (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                cliente_id INTEGER NOT NULL,
+                data TEXT NOT NULL,
+                status TEXT NOT NULL,
+                
+                nome TEXT,        -- AQUI ESTAVA O ERRO (Antes estava 'descricao')
+                valor_total REAL
+            );
 
-                    CREATE TABLE IF NOT EXISTS ordens (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        cliente_id INTEGER NOT NULL,
-                        data TEXT NOT NULL,
-                        status TEXT NOT NULL
-                    );
+            CREATE TABLE IF NOT EXISTS ordens_servicos (
+                ordem_id INTEGER,
+                servico_id INTEGER
+            );
 
-                    CREATE TABLE IF NOT EXISTS ordens_servicos (
-                        ordem_id INTEGER,
-                        servico_id INTEGER
-                    );
+            CREATE TABLE IF NOT EXISTS ordens_produtos (
+                ordem_id INTEGER,
+                produto_id INTEGER
+            );
 
-                    CREATE TABLE IF NOT EXISTS ordens_produtos (
-                        ordem_id INTEGER,
-                        produto_id INTEGER
-                    );
+            CREATE TABLE IF NOT EXISTS orcamentos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                cliente_id INTEGER NOT NULL
+            );
 
-                    CREATE TABLE IF NOT EXISTS orcamentos (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        cliente_id INTEGER NOT NULL
-                    );
+            CREATE TABLE IF NOT EXISTS orcamentos_servicos (
+                orcamento_id INTEGER,
+                servico_id INTEGER
+            );
 
-                    CREATE TABLE IF NOT EXISTS orcamentos_servicos (
-                        orcamento_id INTEGER,
-                        servico_id INTEGER
-                    );
+            CREATE TABLE IF NOT EXISTS orcamentos_produtos (
+                orcamento_id INTEGER,
+                produto_id INTEGER
+            );
 
-                    CREATE TABLE IF NOT EXISTS orcamentos_produtos (
-                        orcamento_id INTEGER,
-                        produto_id INTEGER
-                    );
+            CREATE TABLE IF NOT EXISTS pagamentos (
+                ordem_id INTEGER PRIMARY KEY,
+                data_pagamento TEXT NOT NULL
+            );
 
-                    CREATE TABLE IF NOT EXISTS pagamentos (
-                        ordem_id INTEGER PRIMARY KEY,
-                        data_pagamento TEXT NOT NULL
-                    );
-
-                    CREATE TABLE IF NOT EXISTS agenda (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        ordem_id INTEGER,
-                        data TEXT NOT NULL
-                    );
-                ";
+            CREATE TABLE IF NOT EXISTS agenda (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                ordem_id INTEGER,
+                data TEXT NOT NULL
+            );
+        ";
 
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
